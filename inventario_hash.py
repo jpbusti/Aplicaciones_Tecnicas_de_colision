@@ -32,7 +32,7 @@ def insertar(tabla, id_producto, nombre, precio, cantidad):
         celda = tabla[indice_actual]
 
         if celda is None:
-            # ── Celda libre: insertar aquí ──
+            # Celda libre
             tabla[indice_actual] = crear_producto(id_producto, nombre, precio, cantidad)
 
             if hubo_colision:
@@ -42,7 +42,7 @@ def insertar(tabla, id_producto, nombre, precio, cantidad):
             return True
 
         else:
-            # ── Celda ocupada: hay colisión, sondeo lineal ──
+            # Celda ocupada
             if not hubo_colision:
                 print(f" COLISIÓN en índice {indice_actual} "
                       f"(ocupado por ID={celda[0]} '{celda[1]}')")
